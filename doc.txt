@@ -1,0 +1,56 @@
+
+
+    user
+        -name
+        -role -(PM,PL)
+
+    staff
+        -name
+        -designation
+        -address
+
+    team_member
+        -project_leader_id
+        -staff_id
+
+    project
+        -start_date
+        -end_date
+        -duration
+        -cost
+        -requirments
+        -client
+        -project_status - (On track, Delayed, Extended, Completed)
+        -project_stage (Inception, Milestone1, Milestone 2 and Final Report, Closing)
+        -project_category
+        -project_leader_id
+
+
+
+
+php artisan crud:generate Staff --fields='name#string; designation#string; address#text' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html
+
+php artisan crud:generate TeamMember --fields='project_leader_id#string; staff_id#string' --view-path= --controller-namespace=App\Http\Controllers --route-group= --form-helper=html
+
+php artisan crud:generate Project --fields='start_date#date; end_date#date; duration#string;cost#integer;requirments#text;client#string;project_status#string;project_stage#string;project_category#string;project_leader_id#string' --view-path= --controller-namespace=App\Http\Controllers --route-group= --form-helper=html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////
